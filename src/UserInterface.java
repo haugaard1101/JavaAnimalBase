@@ -1,3 +1,5 @@
+import java.io.FileNotFoundException;
+import java.io.PrintStream;
 import java.util.Locale;
 import java.util.Scanner;
 
@@ -9,7 +11,7 @@ public class UserInterface {
         this.application = application;
     }
 
-    public void start() {
+    public void start() throws FileNotFoundException {
         System.out.println("Welcome to ANIMALBASE 2022");
         System.out.println("==========================");
         System.out.println("Java edition\n");
@@ -163,7 +165,7 @@ public class UserInterface {
         System.out.println("Done!");
     }
 
-    private void save() {
+    private void save() throws FileNotFoundException {
         System.out.println("Saving the database ...");
         application.saveDatabase();
         System.out.println("Saving database completed succesfully");
